@@ -1,0 +1,14 @@
+{% extends 'item/layout.html' %}
+
+{% block content %}
+<div class="card item__container">
+    <div class="card-body">
+        <h1><a href="">{{ item.title }}</a></h1>
+        {% if item.created_date %}
+        <p>작성일: {{ item.created_date }}</p>
+        {% endif %}
+        <p>작성자: {{ item.author }}</p>
+        <div>{{ item.content|linebreaksbr }}</div>
+    </div>
+</div>
+{% endblock %}
